@@ -18,7 +18,7 @@ const NewImpression = () => {
   }, [coords])
 
   const addImpressionHandler = (e) => {
-    if (fields.title && fields.text && fields.lat && fields.lng) {
+    if (fields.title && fields.comment && fields.lat && fields.lng) {
       addImpression(fields)
     } else {
       e.preventDefault()
@@ -49,11 +49,11 @@ const NewImpression = () => {
         <textarea
           className="impression__text"
           style={{margin: '0px', width: '775px', height: '65px',}}
-          value={fields.text}
+          value={fields.comment}
           onChange={(e) => {
             setFields({
               ...fields,
-              text: e.target.value,
+              comment: e.target.value,
             })
           }}
         />

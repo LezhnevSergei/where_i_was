@@ -7,4 +7,4 @@ class ImpressionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Impression
-        fields = ('id', 'author', 'lat', 'lng', 'text',)
+        fields = ('id', 'author', 'title', 'lat', 'lng', 'comment',)

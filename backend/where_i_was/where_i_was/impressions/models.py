@@ -7,8 +7,14 @@ class Impression(models.Model):
         User,
         on_delete=models.CASCADE,
     )
-    text = models.TextField(
-        verbose_name='Текст воспоминания',
+    title = models.CharField(
+        verbose_name='Заголовок воспоминания',
+        max_length=255,
+        default=None,
+    )
+    comment = models.TextField(
+        verbose_name='Комментарий воспоминания',
+        default=None,
     )
     lat = models.DecimalField(
         verbose_name='Широта',

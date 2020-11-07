@@ -50,9 +50,9 @@ function Impressions() {
                     >
                       <div
                         className="impression__author">{impression.author}</div>
-                      <div className="impression__title">Куротой заголовок</div>
+                      <div className="impression__title">{impression.title}</div>
                       <ImpressionMap coords={[impression.lat, impression.lng]}/>
-                      <div className="impression__text">{impression.text}</div>
+                      <div className="impression__text">{impression.comment}</div>
                       <div
                         className="impression_remove"
                         onClick={() => removeHandler(impression.id)}
