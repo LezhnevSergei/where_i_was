@@ -1,0 +1,18 @@
+.header {
+    height: 75px;
+    background-color: #c4f2ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+.login {
+    cursor: pointer;
+    margin-right: 25px;
+}
