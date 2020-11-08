@@ -3,9 +3,13 @@ import ImpressionMap from "../../components/Map/ImpressionMap";
 import {Link} from "react-router-dom";
 import {addImpression} from "../../api";
 
-const NewImpression = () => {
-  const [fields, setFields] = useState({title: '', text: ''})
+const NewImpression = ({user}) => {
+  const [fields, setFields] = useState({title: '', comment: ''})
   const [coords, setCoords] = useState(null)
+
+  useEffect(() => {
+    setFields({...fields, author: user?.user?.id})
+  }, [user])
 
   useEffect(() => {
     if (coords) {

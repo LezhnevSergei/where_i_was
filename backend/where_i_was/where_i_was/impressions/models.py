@@ -29,4 +29,4 @@ class Impression(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.text[:20]}..."
+        return f"{self.title}..."

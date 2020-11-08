@@ -5,7 +5,7 @@ import ImpressionMap from "../../components/Map/ImpressionMap";
 import {Link, NavLink} from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 
-function Impressions() {
+function Impressions({user}) {
   const [impressions, setImpressions] = useState([])
   const [isLoading, setIsLoding] = useState(false)
   const [isEmptyList, setIsEmptyList] = useState(false)
@@ -48,8 +48,6 @@ function Impressions() {
                       className='impression'
                       key={impression + Math.random()}
                     >
-                      <div
-                        className="impression__author">{impression.author}</div>
                       <div className="impression__title">{impression.title}</div>
                       <ImpressionMap coords={[impression.lat, impression.lng]}/>
                       <div className="impression__text">{impression.comment}</div>
